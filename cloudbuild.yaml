@@ -1,7 +1,11 @@
 steps:
 
 - name: gcr.io/cloud-builders/docker
-  args: [ build, -t, gcr.io/autopod-278714/gcp-cloudbuild-gce-angular, . ]
+  args: [ 'build', '-t', 'gcr.io/autopod-278714/gcp-cloudbuild-gce-angular:version1']
+
+- name: gcr.io/cloud-builders/docker
+  args: [ 'push', 'gcr.io/autopod-278714/gcp-cloudbuild-gce-angular:version1']
+
 
 - name: gcr.io/cloud-builders/gcloud
   args: [ compute, instance-groups, managed, rolling-action, restart, gce-angular-instance-group, --zone=us-east1-b ]
