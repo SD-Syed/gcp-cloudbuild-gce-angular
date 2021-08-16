@@ -6,7 +6,7 @@ steps:
 - name: gcr.io/cloud-builders/gcloud
   args: [ compute, instance-groups, managed, rolling-action, restart, gce-angular-instance-group, --zone=us-east1-b ]
 
-
+#images
 images:
 
 - gcr.io/autopod-278714/gcp-cloudbuild-gce-angular
