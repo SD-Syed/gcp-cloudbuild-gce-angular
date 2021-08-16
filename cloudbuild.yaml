@@ -3,8 +3,8 @@ steps:
 - name: gcr.io/cloud-builders/docker
   args: [ build, -t, gcr.io/autopod-278714/gcp-cloudbuild-gce-angular, .]
 
-#- name: gcr.io/cloud-builders/docker
-#  args: [ 'push', 'gcr.io/autopod-278714/gcp-cloudbuild-gce-angular:version1']
+- name: gcr.io/cloud-builders/docker
+  args: [ push, gcr.io/autopod-278714/gcp-cloudbuild-gce-angular]
 
 
 #- name: gcr.io/cloud-builders/gcloud
